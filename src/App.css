@@ -1,0 +1,219 @@
+.App {
+  text-align: center;
+  font-family: 'Dosis', sans-serif;
+}
+
+.Corner-Top-Left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Corner-Top-Right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.Corner-Bottom-Left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.Corner-Bottom-Right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.isBetter {
+
+  background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
+
+  /* background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); */
+  /* background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%); */
+  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+  /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);     */
+}
+
+.isNotBetter {
+
+  background-image: linear-gradient(60deg, #973d3d 0%, #ad5b5b 100%);
+
+  /* background-image: linear-gradient(to top, #0ba360 0%, #3cba92 100%); */
+  /* background-image: linear-gradient(to right, #b8cbb8 0%, #b8cbb8 0%, #b465da 0%, #cf6cc9 33%, #ee609c 66%, #ee609c 100%); */
+  /* background-image: linear-gradient(to right, #4facfe 0%, #00f2fe 100%); */
+  /* background-image: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);     */
+}
+
+.Current-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* font-size: calc(10px + 2vmin); */
+  color: white;
+}
+
+.Current-number {
+  font-family: 'Fira Sans', sans-serif;
+  font-size: calc(20rem);
+  font-weight: 400;
+  /* letter-spacing: -1rem; */
+}
+
+/* .Current-objective {
+  font-size: 1.5rem;
+  margin-left: 10%;
+  margin-right: 10%;
+} */
+
+.Evolution-container {
+  /* display: none; */
+  height: 70px;
+  width: 250px;
+
+  /* position: absolute;
+  margin: 3rem;
+  bottom: 0;
+  right: 0; */
+  /* max-height: 200px; */
+  /* background-color: red;   */
+}
+
+.Delta-container {
+  color: white;
+  opacity: 0.7;
+  margin-top: 4.5rem;
+  margin-right: 3rem;
+  font-size: calc(20rem/(8*1.618));
+  /* font-family: 'Fira Sans', sans-serif; */
+}
+
+.Delta-icon {
+  /* color: #96e6a1; */
+}
+
+.Delta-percentage {
+  font-family: 'Fira Sans', sans-serif;
+  /* color: #96e6a1; */
+}
+
+.Delta-legend {
+  /* color: #96e6a1; */
+}
+
+.Legend-Container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 2rem;
+  font-size: calc(20rem/(8*1.618));
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 300;
+}
+
+.Today-container {
+  margin-top: 2rem;
+  margin-right: 3rem;
+  opacity: 0.6;
+}
+
+.Title {
+  font-size: calc(20rem/(3*1.618));
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem; */
+}
+
+.Loading {
+  font-size: calc(20rem/(3*1.618));
+  /* position: absolute;
+  top: 0;
+  left: 0; */
+  /* margin-top: 2rem;
+  margin-left: 3rem;
+  margin-bottom: 1rem; */
+}
+
+.Today-date {
+  font-size: calc(20rem/(6*1.618));
+  color: white;
+}
+
+.Countries-container {
+  margin-left: 3rem;
+  margin-top: 2rem;
+}
+
+/* Reset Select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0 !important;
+  /* background: #2c3e50; */
+  background-color: rgba(33, 33, 33, 0.1);
+  background-image: none;
+}
+/* Remove IE arrow */
+select::-ms-expand {
+  display: none;
+}
+/* Custom Select */
+.select {
+  position: relative;
+  display: flex;
+  width: 15em;
+  height: 3em;
+  line-height: 3;
+  /* background: #2c3e50; */
+  background-color: rgba(33, 33, 33, 0.1);
+  overflow: hidden;
+  border-radius: .25em;
+  color: rgba(33, 33, 33, 0.7);
+}
+select {
+  flex: 1;
+  padding: 0 .5em;
+  color: #000;
+  color: white;
+  cursor: pointer;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 400;
+  font-size: calc(20rem/(10*1.618));
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  /* background: #34495e; */
+  background-color: rgba(33, 33, 33, 0.1);
+  /* background-color: rgba(33, 33, 33, 0.8); */
+  cursor: pointer;
+  pointer-events: none;
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  /* color: #333333; */
+  color: rgba(255, 255, 255, 0.9);
+}
+.select-item {
+  color: black;
+  font-size: 0.8rem;
+}
