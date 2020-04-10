@@ -26,7 +26,7 @@ const Current = () => {
     <div className="Current-container">
       {isFinite(factor) && (
         <div className="Title">
-          The death multiplication rate*
+          Covid-19 death multiplication rate*
           <br/>
           every 4 days at
           {' '}
@@ -39,7 +39,7 @@ const Current = () => {
         <div className="Title">
           There is not enough data to calculate
           <br/>
-          the death multiplication rate*
+          the Covid-19 death multiplication rate*
           <br/>
           every 4 days for
           {' '}

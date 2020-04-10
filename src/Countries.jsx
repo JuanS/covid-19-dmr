@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { CovidContext } from './Context';
 
-const Countries = () => {
+const Countries = (props) => {
   const { state, dispatch } = useContext(CovidContext);
 
   const handleChange = (event) => {

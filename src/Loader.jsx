@@ -1,4 +1,5 @@
 import React, { useContext, useEffect, useCallback } from 'react';
+import * as qs from 'query-string';
 import { CovidContext } from './Context';
 
 const url = 'https://pomber.github.io/covid19/timeseries.json';
@@ -12,6 +13,15 @@ const Loader = () => {
     xhr.addEventListener('load', () => {
       const json = JSON.parse(xhr.responseText);
 
+      const countries = Object.keys(json);
+
+      const parsed = qs.parse(window.location.search);
+      let defaultCountry = parsed.country ? parsed.country : 'Spain';
+
+      if (!countries.includes(defaultCountry)) {
+        defaultCountry = 'Spain';
+      }
+
       dispatch({
         type: 'set_countries',
         payload: Object.keys(json),
@@ -24,7 +34,7 @@ const Loader = () => {
 
       dispatch({
         type: 'set_country',
-        payload: 'Spain',
+        payload: defaultCountry,
       });
 
       dispatch({

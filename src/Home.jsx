@@ -25,7 +25,7 @@ const Home = () => {
       {!state.isLoading && <Delta />}
       {!state.isLoading && <Current />}
       <span className="Legend-Container Corner-Bottom-Left">
-        *Coronavirus will stop spreading when the rate reaches 1.0
+        *Covid-19 will stop spreading when the rate reaches 1.0
       </span>
     </div>
   );
